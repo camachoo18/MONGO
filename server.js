@@ -1,7 +1,9 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const app = express()
-const port = 3000
+
+const port = process.env.PORT || 3000
+
 
 mongoose.connect("mongodb://localhost:27017/Juegos", {useNewUrlParser: true, useUnifiedTopology: true})
 
@@ -20,5 +22,5 @@ app.get("/", async (req,res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Servidor lanzado en ${port}`)
+    console.log(`Servidor lanzado en http://localhost:${port}`)
 })
