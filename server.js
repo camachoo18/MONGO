@@ -7,7 +7,7 @@ app.use(express.json());
 // Servir archivos estáticos desde la carpeta 'public'
 app.use(express.static('public'));  
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3003;
 
 const USER = process.env.USER;
 const PASSWORD = process.env.PASSWORD;
